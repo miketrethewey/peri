@@ -1,0 +1,63 @@
+dungeons LightWorld {
+  dungeons EasternPalace {
+    SmallChests "Small Treasure chests" { val Num = 4 }
+    ChestKeys "Small keys in Treasure chests" { val Num = 0 }
+    BigChest { val Num = 1; max 1 }
+    BigKey { val Num = 1; max 1 }
+    Compass { val Num = 1; max 1 }
+    Map { val Num = 1; max 1 }
+    BossDrop { val Num = 1; max 1 }
+    Treasures { val Num = 3 } // SmallChests - ChestKeys - BigKey - Compass - Map + BigChest + BossDrop
+                              // 4           - 0         - 1      - 1       - 1   + 1        + 1        = 3
+    MobKeys "Small keys dropped by mobs" { val Num = 1 }
+    PotKeys "Small keys in pots" { val Num = 1 }
+    Boss { ArmosKnights }
+  }
+}
+
+dungeons DarkWorld {
+  dungeons SwampPalace {
+    SmallChests "Small Treasure chests" { val Num = 8 }
+    ChestKeys "Small keys in Treasure chests" { val Num = 1 }
+    BigChest { val Num = 1; max 1 }
+    BigKey { val Num = 1; max 1 }
+    Compass { val Num = 1; max 1 }
+    Map { val Num = 1; max 1 }
+    BossDrop { val Num = 1; max 1 }
+    Treasures { val Num = 6 } // SmallChests - ChestKeys - BigKey - Compass - Map + BigChest + BossDrop
+                              // 8           - 1         - 1      - 1       - 1   + 1        + 1        = 6
+    MobKeys "Small keys dropped by mobs" { val Num = 0 }
+    PotKeys "Small keys in pots" { val Num = 4 }
+    Boss { Arrghus }
+  }
+  dungeons IcePalace {
+    SmallChests "Small Treasure chests" { val Num = 6 }
+    ChestKeys "Small keys in Treasure chests" { val Num = 2 }
+    BigChest { val Num = 1; max 1 }
+    BigKey { val Num = 1; max 1 }
+    Compass { val Num = 1; max 1 }
+    Map { val Num = 1; max 1 }
+    BossDrop { val Num = 1; max 1 }
+    Treasures { val Num = 3 } // SmallChests - ChestKeys - BigKey - Compass - Map + BigChest + BossDrop
+                              // 6           - 2         - 1      - 1       - 1   + 1        + 1        = 3
+    MobKeys "Small keys dropped by mobs" { val Num = 3 }
+    PotKeys "Small keys in pots" { val Num = 1 }
+    Boss { Kholdstare }
+  }
+  dungeons GanonsTower {
+    SmallChests "Small Treasure chests" { val Num = 25 }
+    TorchItems "Locations on torches" { val Num = 1 }
+    TorchKeys "Small keys on torches" { val Num = 1 }
+    ChestKeys "Small keys in Treasure chests" { val Num = 3 }
+    BigChest { val Num = 1; max 1 }
+    BigKey { val Num = 1; max 1 }
+    Compass { val Num = 1; max 1 }
+    Map { val Num = 1; max 1 }
+    BossDrop { val Num = 0; max 0 }
+    Treasures { val Num = 20 } // SmallChests + TorchItems - TorchKeys - ChestKeys - BigKey - Compass - Map + BigChest + BossDrop
+                               // 25          + 1          - 1         - 3         - 1      - 1       - 1   + 1        + 0        = 20
+    MobKeys "Small keys dropped by mobs" { val Num = 1 }
+    PotKeys "Small keys in pots" { val Num = 3 }
+    Boss { Agahnim2 }
+  }
+}
