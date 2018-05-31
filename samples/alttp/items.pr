@@ -13,6 +13,11 @@ items Prize {
     PendantOfWisdom "Pendant of Wisdom" { alias BluePendant }
     PendantOfPower "Pendant of Power" { alias RedPendant }
   }
+  items Triforce {
+    Triforce
+    TriforcePiece
+    PowerStar
+  }
 }
 
 items Major {
@@ -48,7 +53,7 @@ items Major {
   IceRod { alias NiceRod }
   Hookshot
   Bow
-  items Arrows { WoodenArrows; SilverArrows }
+  items EquippableArrows { WoodenArrows; SilverArrows }
   BowWithArrows "Bow with Arrows" { provides [Bow, WoodenArrows] }
   BowWithSilverArrows "Bow with Silver Arrows" { provides [Bow, SilverArrows] }
   Hammer
@@ -70,6 +75,8 @@ items Major {
   PegasusBoots { alias Boots }
   BookOfMudora { alias Book }
   Flippers
+  HeartContainer { max 11 }
+  HeartPiece { max 24 }
   items Bottle {
     EmptyBottle
     RedBottle "Bottle with red potion"
@@ -96,13 +103,34 @@ items Major {
 
 items Minor {
   Net "Bug-Catching Net" { alias BugCatchingNet }
+  items Arrows {
+    SingleArrow { val Num = 1 }
+    TenArrows { val Num = 10 }
+  }
   items Bombs {
     SingleBomb { val Num = 1 }
     ThreeBombs { val Num = 3 }
-    TenBombs { val Num = 10 }
   }
   BlueBoomerang { alias Bluemerang }
   RedBoomerang { alias Redmerang }
+  items CapacityUpgrades {
+    items ArrowCapacity {
+      ArrowsPlusFive { val Num = 5; max 6 }
+      ArrowsPlusTen { val Num = 10; max 1 }
+    }
+    items BombCapacity {
+      BombsPlusFive { val Num = 5; max 6 }
+      BombsPlusTen { val Num = 10; max 1 }
+    }
+  }
+  items Money {
+    GreenRupee { val Num = 1 }
+    BlueRupee { val Num = 5 }
+    RedRupee { val Num = 20 }
+    FiftyRupess { val Num = 50 }
+    OneHundredRupees { val Num = 100 }
+    ThreeHundredRupees { val Num = 300 }
+  }
 }
 
 items Event {
