@@ -1,7 +1,7 @@
 drops Ammo {
   drops Arrows {
-    FiveArrows { val Num = 5; numInPool = 5 }
-    TenArrows { val Num = 10; numInPool = 3 }
+    FiveArrows { val Num = 5; numInPool Num = 5 }
+    TenArrows { val Num = 10; numInPool Num = 3 }
   }
   drops Bombs {
     OneBomb { val Num = 1; numInPool Num = 7 }
