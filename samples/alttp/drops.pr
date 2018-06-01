@@ -1,24 +1,24 @@
 drops Ammo {
   drops Arrows {
-    FiveArrows { val Num = 5; numInPool Num = 5 }
-    TenArrows { val Num = 10; numInPool Num = 3 }
+    FiveArrows "Five Arrows" { val Num = 5; val NumInPool = 5 }
+    TenArrows "Ten Arrows" { val Num = 10; val NumInPool = 3 }
   }
   drops Bombs {
-    OneBomb { val Num = 1; numInPool Num = 7 }
-    FourBombs { val Num = 4; numInPool Num = 1 }
-    EightBombs { val Num = 8; numInPool Num = 2 }
+    OneBomb "One Bomb" { val Num = 1; val NumInPool = 7 }
+    FourBombs "Four Bombs" { val Num = 4; val NumInPool = 1 }
+    EightBombs "Eight Bombs" { val Num = 8; val NumInPool = 2 }
   }
   drops Magic {
-    MagicJar { numInPool Num = 6 } // Partial
-    MagicDecanter { numInPool Num = 3 } // Full
+    MagicJar "Magic Jar" { val NumInPool = 6 } // Partial
+    MagicDecanter "Magic Decanter" { val NumInPool = 3 } // Full
   }
 }
 drops Money {
-  GreenRupee { val Num = 1; numInPool Num = 9 }
-  BlueRupee { val Num = 5; numInPool Num = 7 }
-  RedRupee { val Num = 20 numInPool Num = 6 }
+  GreenRupee "Green Rupee" { val Num = 1; val NumInPool = 9 }
+  BlueRupee "Blue Rupee" { val Num = 5; val NumInPool = 7 }
+  RedRupee "Red Rupee" { val Num = 20 val NumInPool = 6 }
 }
 drops Health {
-  Heart { val Num = 1; numInPool Num = 13 }
-  Fairy { val Num = 20; numInPool Num = 1 }
+  Heart { val Num = 1; val NumInPool = 13 }
+  Fairy { val Num = 20; val NumInPool = 1 }
 }
