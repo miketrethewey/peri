@@ -13,72 +13,76 @@ items Prize {
     PendantOfWisdom "Pendant of Wisdom" { alias BluePendant }
     PendantOfPower "Pendant of Power" { alias RedPendant }
   }
-  items Triforce {
+  items GoalItem "Goal Item" {
     Triforce
-    TriforcePiece
-    PowerStar
+    TriforcePiece "Triforce Piece"
+    PowerStar "Power Star"
   }
 }
 
 items Major {
   items Sword {
-    FighterSword { alias L1Sword }
-    MasterSword { alias [L2Sword, LightSaber] }
-    TemperedSword { alias [L3Sword, BaconSword]; provides MasterSword }
-    GoldSword { alias [L4Sword, ButterSword]; provides TemperedSword }
-    ProgressiveSword {
+    FighterSword "Fighter's Sword" { alias L1Sword }
+    MasterSword "Master Sword" { alias [L2Sword, LightSaber "Light Saber"] }
+    TemperedSword "Tempered Sword" { alias [L3Sword, BaconSword "Bacon Sword"]; provides MasterSword }
+    GoldSword "Gold Sword" { alias [L4Sword, ButterSword "Butter Sword"]; provides TemperedSword }
+    ProgressiveSword "Progressive Sword" {
       progressive [FighterSword, MasterSword, TemperedSword, GoldSword]
     }
   }
   items Shield {
-    FighterShield { alias BlueShield }
-    FireShield { alias RedShield }
-    MirrorShield { alias RiotShield }
-    ProgressiveShield {
+    FighterShield "Fighter's Shield" { alias BlueShield "Blue Shield" }
+    FireShield "Fire Shield" { alias RedShield "Red Shield" }
+    MirrorShield "Mirror Shield" { alias RiotShield "Riot Shield" }
+    ProgressiveShield "Progressive Shield" {
       progressive [FighterShield, FireShield, MirrorShield]
     }
   }
-  FighterSwordAndShield "Fighter Sword & Shield" {
+  FighterSwordAndShield "Fighter's Sword & Shield" {
     alias L1SwordAndShield
     provides [FighterSword, FighterShield]
   }
   items Armor {
-    BlueMail
-    RedMail
-    ProgressiveMail {
+    GreenMail "Green Mail"
+    BlueMail "Blue Mail"
+    RedMail "Red Mail"
+    ProgressiveMail "Progressive Mail" {
       progressive [BlueMail, RedMail]
     }
   }
-  items FireSource { Lamp; FireRod }
-  IceRod { alias NiceRod }
+  items FireSource "Fire Source" {
+    Lamp { alias [Lantern, Flashlight] }
+    FireRod "Fire Rod" { alias RageRod "Rage Rod" }
+  }
+  IceRod "Ice Rod" { alias NiceRod "Nice Rod" }
   Hookshot
   Bow
-  items EquippableArrows { WoodenArrows; SilverArrows }
+  items EquippableArrows "Equippable Arrows" { WoodenArrows "Wooden Arrows" alias [WoodArrows "Wood Arrows"]; SilverArrows "Silver Arrows" alias Silvers }
   BowWithArrows "Bow with Arrows" { provides [Bow, WoodenArrows] }
   BowWithSilverArrows "Bow with Silver Arrows" { provides [Bow, SilverArrows] }
   Hammer
   Mushroom
-  MagicPowder { alias Powder }
+  MagicPowder "Magic Powder" { alias Powder }
   Shovel
-  Flute { alias Ocarina }
+  Flute { alias [Floot, Ocarina, SwagDuck] }
   Cape { val InvincibilityCost = 2 }
-  CaneOfByrna { val InvincibilityCost = 1; alias [CaneOfBryan, BlueCane] }
-  CaneOfSomaria { alias RedCane }
+  CaneOfByrna "Cane of Byrna" { val InvincibilityCost = 1; alias [CaneOfBryan "Cane of Bryan", BlueCane "Blue Cane", Bryan] }
+  CaneOfSomaria "Cane of Somaria" { alias [RedCane "Red Cane", Kane] }
   items Glove {
-    PowerGlove
+    PowerGlove "Power Glove"
     TitansMitts "Titan's Mitts" { alias Mitts }
-    ProgressiveGlove {
+    ProgressiveGlove "Progressive Glove" {
       progressive [PowerGlove, TitansMitts]
     }
   }
-  MoonPearl { alias Pearl }
-  PegasusBoots { alias Boots }
-  BookOfMudora { alias Book }
+  MoonPearl "Moon Pearl" { alias Pearl }
+  PegasusBoots "Pegasus Boots" { alias Boots }
+  BookOfMudora "Book of Mudora" { alias [Book, Literacy] }
   Flippers
-  HeartContainer { max 11 }
-  HeartPiece { max 24 }
+  HeartContainer "Heart Container" { max 11 }
+  HeartPiece "Heart Piece" { max 24 }
   items Bottle {
-    EmptyBottle
+    EmptyBottle "Empty Bottle"
     RedBottle "Bottle with red potion"
     GreenBottle "Bottle with green potion"
     BlueBottle "Bottle with blue potion"
@@ -87,10 +91,10 @@ items Major {
     GoldBeeBottle "Bottle with golden bee"
     max 4
   }
-  items MagicReduction {
-    HalfMagic { val Factor = 2 }
-    QuarterMagic { val Factor = 4 }
-    ProgressiveMagic {
+  items MagicUpgrade "Magic Upgrade" {
+    HalfMagic "Half Magic" { val Factor = 2 }
+    QuarterMagic "Quarter Magic" { val Factor = 4 }
+    ProgressiveMagic "Progressive Magic" {
       progressive [HalfMagic, QuarterMagic]
     }
   }
@@ -104,38 +108,41 @@ items Major {
 items Minor {
   Net "Bug-Catching Net" { alias BugCatchingNet }
   items Arrows {
-    SingleArrow { val Num = 1 }
-    TenArrows { val Num = 10 }
+    SingleArrow "Single Arrow" { val Num = 1; alias ValidationArrow "Validation Arrow" }
+    TenArrows "Ten Arrows" { val Num = 10 }
   }
   items Bombs {
-    SingleBomb { val Num = 1 }
-    ThreeBombs { val Num = 3 }
+    SingleBomb "Single Bomb" { val Num = 1; alias OneBomb "One Bomb" }
+    ThreeBombs "Three Bombs" { val Num = 3 }
   }
-  BlueBoomerang { alias Bluemerang }
-  RedBoomerang { alias Redmerang }
-  items CapacityUpgrades {
-    items ArrowCapacity {
-      ArrowsPlusFive { val Num = 5; max 6 }
-      ArrowsPlusTen { val Num = 10; max 1 }
+  items Boomerang {
+    BlueBoomerang "Blue Boomerang" { alias Bluemerang }
+    RedBoomerang "Red Boomerang" { alias Redmerang }
+  }
+  items CapacityUpgrades "Capacity Upgrades" {
+    items ArrowCapacity "Arrow Capacity" {
+      ArrowsPlusFive "Add 5 arrows to maximum" { val Num = 5; max 6 }
+      ArrowsPlusTen "Add 10 arrows to maximum" { val Num = 10; max 1 }
     }
-    items BombCapacity {
-      BombsPlusFive { val Num = 5; max 6 }
-      BombsPlusTen { val Num = 10; max 1 }
+    items BombCapacity "Bomb Capacity" {
+      BombsPlusFive "Add 5 bombs to maximum" { val Num = 5; max 6 }
+      BombsPlusTen "Add 10 bombs to maximum" { val Num = 10; max 1 }
     }
   }
   items Money {
-    GreenRupee { val Num = 1 }
-    BlueRupee { val Num = 5 }
-    RedRupee { val Num = 20 }
-    FiftyRupess { val Num = 50 }
-    OneHundredRupees { val Num = 100 }
-    ThreeHundredRupees { val Num = 300 }
+    GreenRupee "Green Rupee" { val Num = 1 }
+    BlueRupee "Blue Rupee" { val Num = 5 }
+    RedRupee "Red Rupee" { val Num = 20 }
+    FiftyRupess "Fifty Rupees" { val Num = 50 }
+    OneHundredRupees "One Hundred Rupees" { val Num = 100 }
+    ThreeHundredRupees "Three Hundred Rupees" { val Num = 300 }
   }
 }
 
 items Event {
-  DefeatAgahnim1
-  DefeatAgahnim2
+  RescueZelda "Rescue Zelda"
+  DefeatAgahnim1 "Defeat Agahnim in Hyrule Castle Tower"
+  DefeatAgahnim2 "Defeat Agahnim in Ganon's Tower"
 }
 
 fn CanMeltIce = FireRod or CanCast(Bombos)
@@ -152,18 +159,18 @@ fn HasWeaponsFor(n) =
 fn CanGetGoldBee = Net and Bottle and (CanCast(Quake) or Sword)
 
 enum Boss {
-  ArmosKnights
+  ArmosKnights "Armos Knights"
   Lanmolas
   Moldorm
-  Agahnim1
-  HelmasaurKing
+  Agahnim1 "Agahnim in Hyrule Castle Tower"
+  HelmasaurKing "Helmasaur King"
   Arrghus
   Mothula
   Blind
   Kholdstare
   Vitreous
   Trinexx
-  Agahnim2
+  Agahnim2 "Agahnim in Ganon's Tower"
   Ganon
 }
 
